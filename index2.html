@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Asistencia</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Confirmación de Asistencia</h1>
+
+        <form id="confirmForm" class="card p-4 shadow-sm"><!--estilo tarjeta padding interno y sombra ligera-->
+
+            <div class="mb-3">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="">¿Asistirás?</label>
+                <select class="form-select" name="respuesta" id="respuesta">
+                    <option value="">Selecciona una opción</option>
+                    <option value="Sí">Sí</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary" >Enviar</button>
+
+            <div id="respuestaContainer" class="mt-4">
+                <!--En este Div escribiremos html usando JS y una funcion listener que estara escuchando a que suceda una accion-->
+            </div>
+
+            <script src="funciones.js" ></script>
+
+        </form>
+    </div>
+    
+</body>
+</html>
